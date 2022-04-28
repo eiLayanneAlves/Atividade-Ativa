@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+	
+  </head>
+  <style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+html {
+  font-family: Arial;
+  font-size: 16px;
+  background: #5e42a6;
+}
+
+.sidebar {
+  position: fixed;
+  width: 25%;
+  height: 100vh;
+  background: #312450;
+  font-size: 0.65em;
+}
+
+.nav {
+  position: relative;
+  margin: 0 15%;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  
+  li {
+    position: relative;
+    margin: 3.2em 0;
+    
+    a {
+      line-height: 5em;
+      text-transform: uppercase;
+      text-decoration: none;
+      letter-spacing: 0.4em;
+      color: rgba(#FFF, 0.35);
+      display: block;
+      transition: all ease-out 300ms;
+    }
+    
+    &.active a {
+      color: white;
+    }
+    
+    &:not(.active)::after {
+      opacity: 0.2;
+    }
+    
+    &:not(.active):hover a {
+      color: rgba(#FFF, 0.75);
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0.2em;
+      background: black;
+      left: 0;
+      bottom: 0;
+      background-image: linear-gradient(to right, #5e42a6, #b74e91)
+    }
+  }
+}
+
+.twitter {
+  position: relative;
+  width: 75%;
+  float: right;
+  height: 100vh;
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  a {
+    position: relative;
+    
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  
+  p {
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    color: #FFF;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+}
+  </style>
+  <body>
+    
+<h1> MacBook 2021</h1> 
+  <h2> Preencha o formulário abaixo para participar do sorteio de um MacBook 2021, online e grátis</h2><br />
+
+<form action="Script_do_Formulario.php" method="post">
+
+<!-- DADOS PESSOAIS-->
+<fieldset>
+ <legend>Dados Pessoais</legend>
+ <table cellspacing="10">
+  <tr>
+   <td>
+    <label for="nome">Nome: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="email">
+   </td>
+   <td>
+    <label for="sobrenome">Sobrenome: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="sobrenome">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label>Nascimento: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="dia" size="2" maxlength="2" value="dd"> 
+   <input type="text" name="mes" size="2" maxlength="2" value="mm"> 
+   <input type="text" name="ano" size="4" maxlength="4" value="aaaa">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="rg">RG: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="rg" size="13" maxlength="13"> 
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label>CPF:</label>
+   </td>
+   <td align="left">
+    <input type="text" name="cpf" size="9" maxlength="9"> - <input type="text" name="cpf2" size="2" maxlength="2">
+   </td>
+  </tr>
+ </table>
+</fieldset>
+
+<br />
+<!-- ENDEREÇO -->
+<fieldset>
+ <legend>Perguntas</legend>
+ <table cellspacing="10">
+
+  <tr>
+   <td>
+    <label for="rua">Qual é o melhor MacBook 2021?</label>
+   </td>
+   <td align="left">
+    <input type="text" name="rua">
+   </td>
+   <td>
+    <label for="numero">Qual é o MacBook Pro mais recente?</label>
+   </td>
+   <td align="left">
+    <input type="text" name="numero" size="4">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="bairro">Quanto custa um MacBook Pro nos EUA 2021? </label>
+   </td>
+   <td align="left">
+    <input type="text" name="bairro">
+   </td>
+  </tr>
+  <tr>
+  
+  </tr>
+  <tr>
+   <td>
+    <label for="cidade">Cidade: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="cidade">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="cep">Quando lança novo MacBook Pro? </label>
+   </td>
+   <td align="left">
+    <input type="text" name="cep" size="5" maxlength="5"> - <input type="text" name="cep2" size="3" maxlength="3">
+   </td>
+  </tr>
+ </table>
+</fieldset>
+<br />
+
+<!-- DADOS DE LOGIN -->
+<fieldset>
+ <legend>Qual o MacBook Air mais recente?</legend>
+ <table cellspacing="10">
+  <tr>
+   <td>
+    <label for="email">Qual o MacBook mais caro? </label>
+   </td>
+   <td align="left">
+    <input type="text" name="email">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="imagem">Qual a vantagem de ter um MacBook?</label>
+   </td>
+   <td>
+    <input type="file" name="imagem" >
+
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="login">Qual o melhor Mac para estudantes? </label>
+   </td>
+   <td align="left">
+    <input type="text" name="login">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="pass">Qual melhor iMac para comprar? </label>
+   </td>
+   <td align="left">
+    <input type="password" name="pass">
+   </td>
+  </tr>
+  <tr>
+   <td>
+    <label for="passconfirm">Qual a versão mais atual do macOS? </label>
+   </td>
+   <td align="left">
+    <input type="password" name="passconfirm">
+   </td>
+  </tr>
+ </table>
+</fieldset>
+<br />
+<input type="submit">
+<input type="reset" value="Limpar">
+</form>
+
+  </body>
+</html>
